@@ -7,8 +7,8 @@ spec:
   rules:
   - http:
       paths:
-      pathType: Prefix
       - path: /?(.*)
+        pathType: Prefix
         backend:
           serviceName: myapp-service
           servicePort: 3000
