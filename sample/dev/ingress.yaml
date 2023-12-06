@@ -24,7 +24,3 @@ spec:
             name: myapp-api-service
             port:
               number: 80
-      # - path: /api/?(.*)
-      #   backend:
-      #     serviceName: k8-training-api
-      #     servicePort: 80
