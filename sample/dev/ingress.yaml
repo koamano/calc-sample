@@ -1,15 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-ingress
+  name: myapp-ingress
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
+      pathType: Prefix
       - path: /?(.*)
         backend:
-          serviceName: k8-training-website
+          serviceName: myapp-service
           servicePort: 3000
       # - path: /api/?(.*)
       #   backend:
