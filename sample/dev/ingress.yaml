@@ -3,14 +3,14 @@ kind: Ingress
 metadata:
   name: nginx-ingress
   annotations:
-    nginx.org/rewrites: "serviceName=myapp-service rewrite=/;serviceName=myapp-api-service rewrite=/"
+    nginx.org/rewrites: "serviceName=myapp-api-service rewrite=/"
 spec:
   ingressClassName: nginx
   rules:
   - host : appsample.kamanoaws.com
     http:
       paths:
-      - path: /home
+      - path: /
         pathType: Prefix
         backend:
           service:
