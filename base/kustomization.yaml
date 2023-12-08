@@ -1,10 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: myapp_kustomization
+
 resources:
 - deployment_api.yaml
 - deployment_frontend.yaml
+- ingress.yaml
 - service_api.yaml
 - service_frontend.yaml
-- ingress.yaml
+
