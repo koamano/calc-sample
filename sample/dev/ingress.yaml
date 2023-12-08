@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host : appsample.kamanoaws.com
+  - host : sample.kosukeamano.com
     http:
       paths:
       - path: /
