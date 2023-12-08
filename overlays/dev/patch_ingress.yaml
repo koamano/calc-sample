@@ -2,6 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx-ingress
+  annotations:
+    nginx.org/rewrites: "serviceName=myapp-api-service rewrite=/"
 spec:
   rules:
   - host : sample-dev.kosukeamano.com
