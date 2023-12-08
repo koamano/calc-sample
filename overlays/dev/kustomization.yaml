@@ -5,4 +5,4 @@ resources:
   - ../../base
 patches:
   - path: patch_deployment_api.yaml
-  - path: patch_ingress.yaml
+  # - path: patch_ingress.yaml
