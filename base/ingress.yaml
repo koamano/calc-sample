@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    nginx.org/rewrites: "serviceName=myapp-api-service rewrite=/"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host : sample-dev.kosukeamano.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp-service
+            port:
+              number: 3000
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp-api-service
+            port:
+              number: 80
